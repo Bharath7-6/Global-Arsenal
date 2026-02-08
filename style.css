@@ -1,0 +1,643 @@
+/* ===== GLOBAL THEME – OPTION B (BLACK + CYAN) ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #05080f;
+    color: #e0e0e0;
+}
+
+/* SUBTLE TECH GRID BACKGROUND EFFECT */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#00e5ff 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+/* ===== TYPOGRAPHY UPGRADE ===== */
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(0,229,255,0.4);
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+
+/* ===== ORIGINAL PREMIUM INTRO ===== */
+
+#intro {
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle at center, #05080f, #000);
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#introCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.introContent {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#typeText {
+    font-size: 55px;
+    color: #00e5ff;
+    text-shadow: 0 0 25px #00e5ff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+/* INPUT BOX */
+#codeInput {
+    padding: 14px;
+    width: 300px;
+
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00e5ff;
+
+    color: white;
+    border-radius: 30px;
+
+    text-align: center;
+    font-size: 16px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+#codeInput:focus {
+    box-shadow: 0 0 18px #00e5ff;
+}
+
+/* MODERN UNLOCK BUTTON */
+.introContent button {
+    margin-top: 15px;
+    padding: 14px 55px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    background: linear-gradient(45deg, #00e5ff, #0077ff);
+    border: none;
+
+    color: black;
+    border-radius: 40px;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    font-weight: bold;
+}
+
+.introContent button:hover {
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 40px #00e5ff;
+
+    transform: scale(1.1);
+}
+
+
+/* ===== GLASS NAVBAR ===== */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 40px;
+    z-index: 50;
+    transition: 0.4s;
+}
+
+nav.hidden {
+    top: -120px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+/* NAVBAR HOVER GLOW EFFECT */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #00e5ff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00e5ff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== ULTRA PREMIUM HERO SECTION ===== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main background image */
+.heroBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: brightness(55%) contrast(115%);
+    animation: slowMove 25s infinite alternate ease-in-out;
+}
+
+@keyframes slowMove {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.15); }
+}
+
+/* Overlay for dark depth */
+.heroOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.85)
+    );
+    z-index: 2;
+}
+
+/* Gradient layer for color feel */
+.heroGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 229, 255, 0.25),
+        transparent 65%
+    );
+
+    animation: gradientPulse 8s infinite alternate;
+}
+
+@keyframes gradientPulse {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+/* Animated tech grid */
+.heroGrid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(rgba(0,229,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.08) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to { background-position: 100px 100px; }
+}
+
+/* Floating tiny particles */
+.heroParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    opacity: 0.3;
+    animation: particleMove 30s linear infinite;
+}
+
+@keyframes particleMove {
+    from { background-position: 0 0; }
+    to { background-position: 200px 200px; }
+}
+
+/* Hero text area */
+.heroContent {
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.heroContent h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 72px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 30px #00e5ff;
+
+    animation: textGlow 4s infinite alternate;
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px #00e5ff; }
+    to { text-shadow: 0 0 40px #00e5ff; }
+}
+
+.heroContent p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Modern button */
+.heroBtn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 40px;
+
+    text-decoration: none;
+    color: white;
+
+    border: 2px solid #00e5ff;
+    border-radius: 40px;
+
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.heroBtn:hover {
+    background: #00e5ff;
+    color: black;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 30px #00e5ff;
+
+    transform: translateY(-5px);
+}
+
+
+/* ===== SECTIONS ===== */
+
+.section {
+    padding: 90px 10%;
+}
+
+.dark {
+    background: #0a0e18;
+}
+
+
+/* ===== SPLIT LAYOUT ===== */
+
+.split {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.split img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+/* IMAGE MICRO ANIMATION */
+.split img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(0,229,255,0.5);
+}
+
+
+/* ===== WEAPON BLOCKS ===== */
+
+.weaponBlock {
+    display: flex;
+    margin: 80px 0;
+    gap: 50px;
+    align-items: center;
+}
+
+.weaponBlock.reverse {
+    flex-direction: row-reverse;
+}
+
+.weaponBlock img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(0,229,255,0.3);
+}
+
+/* WEAPON IMAGE HOVER EFFECT */
+.weaponBlock img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(0,229,255,0.7);
+}
+
+
+/* ===== FACT CARDS ===== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.factCard {
+    background: #0f1625;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,229,255,0.4);
+
+    transition: all 0.4s ease;
+}
+
+/* FACT CARD HOVER */
+.factCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0,229,255,0.6);
+}
+
+
+/* ===== CONTACT BOX ===== */
+
+.contactBox {
+    background: #0f1625;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,229,255,0.4);
+    transition: 0.4s;
+}
+
+.contactBox:hover {
+    box-shadow: 0 0 30px rgba(0,229,255,0.5);
+}
+
+
+/* ===== ADVANCED POP ANIMATIONS ===== */
+
+.reveal {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+.reveal-up {
+    transform: translateY(80px);
+}
+
+.reveal-left {
+    transform: translateX(-120px);
+}
+
+.reveal-right {
+    transform: translateX(120px);
+}
+
+.reveal-zoom {
+    transform: scale(0.8);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #000;
+    letter-spacing: 1px;
+}
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media(max-width: 768px) {
+
+    .split, .weaponBlock {
+        flex-direction: column;
+    }
+
+    .heroContent h1 {
+        font-size: 40px;
+    }
+
+}
+/* DYNAMIC SCROLL BACKGROUND */
+
+body.scrollEffect {
+    background: linear-gradient(
+        180deg,
+        #05080f 0%,
+        #060b16 30%,
+        #07101e 60%,
+        #05080f 100%
+    );
+    transition: background 0.8s ease;
+}
+/* SCROLL PARTICLES BACKGROUND */
+
+#bgParticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bgDot {
+    position: absolute;
+    background: rgba(0,229,255,0.4);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,229,255,0.6);
+    animation: moveDots 10s linear infinite;
+}
+
+@keyframes moveDots {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
+}
+.sectionActive {
+    background: linear-gradient(
+        135deg,
+        rgba(0,229,255,0.05),
+        rgba(0,0,0,0.8)
+    );
+    transition: 0.8s;
+}
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #00e5ff;
+    width: 0%;
+    z-index: 200;
+}
+/* ===== SCROLL PROGRESS BAR ===== */
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #00e5ff;
+    width: 0%;
+    z-index: 200;
+    transition: 0.2s;
+}
+
+
+/* ===== DYNAMIC BACKGROUND SHIFT ===== */
+
+body.scrollEffect {
+    background: linear-gradient(
+        180deg,
+        #05080f 0%,
+        #060b16 30%,
+        #07101e 60%,
+        #05080f 100%
+    );
+    transition: background 1s ease;
+}
+
+
+/* ===== FLOATING PARTICLES IN MAIN SITE ===== */
+
+#bgParticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bgDot {
+    position: absolute;
+    background: rgba(0,229,255,0.35);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,229,255,0.5);
+    animation: moveDots linear infinite;
+}
+
+@keyframes moveDots {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-700px);
+        opacity: 0;
+    }
+}
+
+
+/* ===== SECTION HIGHLIGHT ON SCROLL ===== */
+
+.sectionActive {
+    background: linear-gradient(
+        135deg,
+        rgba(0,229,255,0.04),
+        rgba(0,0,0,0.9)
+    );
+    transition: 1s ease;
+}
+/* FIX: Hide hamburger on desktop */
+
+.menuToggle {
+    display: none !important;
+}
+
+/* Show only on mobile */
+@media(max-width: 768px) {
+    .menuToggle {
+        display: block !important;
+        font-size: 26px;
+        color: white;
+    }
+}

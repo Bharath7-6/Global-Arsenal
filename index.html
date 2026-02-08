@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Global Arsenal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="progressBar"></div>
+
+<!-- INTRO PAGE -->
+<div id="intro">
+
+    <canvas id="introCanvas"></canvas>
+
+    <div class="introContent">
+        <h1 id="typeText">GLOBAL ARSENAL</h1>
+        <p>Type the code to enter</p>
+
+        <input type="text" id="codeInput" placeholder="Enter code here">
+
+        <button onclick="checkCode()">UNLOCK</button>
+
+        <p id="errorMsg"></p>
+    </div>
+
+</div>
+
+
+
+<!-- MAIN WEBSITE -->
+<div id="main" style="display:none;">
+<div id="bgParticles"></div>
+<nav id="navbar">
+    <div class="logo">GLOBAL ARSENAL</div>
+
+    <div class="menuToggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#weapons">Weapons</a></li>
+        <li><a href="#facts">Facts</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section class="hero">
+
+    <div class="heroBgLayers">
+        <div class="heroGradient"></div>
+        <div class="heroGrid"></div>
+        <div class="heroParticles"></div>
+    </div>
+
+    <img src="intro.jpeg" class="heroBg">
+
+    <div class="heroOverlay"></div>
+
+    <div class="heroContent reveal-zoom">
+        <h1>Global Arsenal</h1>
+        <p>The Technology Behind Modern Warfare</p>
+
+        <a href="#weapons" class="heroBtn">Explore Arsenal</a>
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+<section id="about" class="section reveal reveal-left">
+
+<div class="split">
+
+<div class="text reveal reveal-left">
+<h2>About This Project</h2>
+
+<p>
+A modern interactive showcase explaining the most powerful military weapons ever developed.
+Built as a professional mini project with animations and premium UI.
+</p>
+
+</div>
+
+<div class="image reveal reveal-right">
+<img src="public/Tsar Bomba.jpeg">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WEAPONS (ALTERNATING LAYOUT) -->
+<section id="weapons" class="section dark">
+
+<h2 class="reveal reveal-up">Most Powerful Weapons</h2>
+
+
+<div class="weaponBlock reveal reveal-left">
+
+<div class="image reveal reveal-zoom">
+<img src="public/Tsar Bomba.jpeg">
+</div>
+
+<div class="text reveal reveal-right">
+<h3>Tsar Bomba</h3>
+<p>
+The most powerful nuclear bomb ever detonated, producing 50 megatons of energy.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="weaponBlock reverse reveal reveal-right">
+
+<div class="image reveal reveal-zoom">
+<img src="public/RS-28 Sarmat Satan II ICBM.jpeg">
+</div>
+
+<div class="text reveal reveal-left">
+<h3>RS-28 Sarmat</h3>
+<p>
+Russian intercontinental missile capable of carrying multiple nuclear warheads.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="weaponBlock reveal reveal-left">
+
+<div class="image reveal reveal-zoom">
+<img src="public/Trident II (D5) SLBM.jpeg">
+</div>
+
+<div class="text reveal reveal-right">
+<h3>Trident II Missile</h3>
+<p>
+Submarine launched ballistic missile forming backbone of nuclear deterrence.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="weaponBlock reverse reveal reveal-right">
+
+<div class="image reveal reveal-zoom">
+<img src="public/3M22 Zirkon Missile.jpeg">
+</div>
+
+<div class="text reveal reveal-left">
+<h3>Zirkon Hypersonic</h3>
+<p>
+Hypersonic missile traveling at Mach 8+ making interception extremely difficult.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="weaponBlock reveal reveal-left">
+
+<div class="image reveal reveal-zoom">
+<img src="public/GBU43B MOAB.jpeg">
+</div>
+
+<div class="text reveal reveal-right">
+<h3>MOAB Bomb</h3>
+<p>
+Most powerful non-nuclear bomb ever used in combat.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- DID YOU KNOW -->
+<section id="facts" class="section reveal reveal-up">
+
+<h2 class="reveal reveal-up">Did You Know?</h2>
+
+<div class="grid">
+
+<div class="factCard reveal reveal-zoom">
+Nuclear submarines can operate underwater for over 3 months without resurfacing.
+</div>
+
+<div class="factCard reveal reveal-zoom">
+Hypersonic missiles travel faster than 6000 kilometers per hour.
+</div>
+
+<div class="factCard reveal reveal-zoom">
+Modern ICBMs can hit targets on the other side of the planet in minutes.
+</div>
+
+<div class="factCard reveal reveal-zoom">
+Tsar Bomba explosion was visible from 1000 km away.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="section dark reveal reveal-up">
+
+<h2>Contact Me</h2>
+
+<div class="contactBox reveal reveal-zoom">
+
+<p><b>Email:</b> bkambala@gitam.in</p>
+<p><b>Phone:</b> +91 6304446201</p>
+<p><b>LinkedIn:</b> 
+<a href="https://www.linkedin.com/in/kambala-bharath-kumar-reddy-297985301/" target="_blank">
+View Profile
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+
+<footer class="reveal reveal-up">
+Created by k.Bharath Kumar reddy | GitHub Pages Project
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
